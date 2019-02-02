@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <title>Table</title>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/lab3-theme.css"/>
+	<script src="js/table.js"></script>
+	<style>
+		table, td, th { 
+			border: 1px solid black 
+			}
+			thead {background-color: blue}
+			tfoot {background-color: brown}
+		</style>
+</head>
+<body>
+
+	<header>
+		<div class="center">
+			<h2>
+			     WEB222 - Assignment 3
+			</h2>
+		</div>
+	</header>
+	<nav>
+		<div class="center">
+		<ul>	
+			<li><a href="index.html">Home</a></li>
+			<li><a href="list.html">List</a></li>
+			<li><a href="table.html">Table</a></li>
+			<li><a href="image.html">Image</a></li>
+			<li><a href="audio.html">Audio</a></li>
+			<li><a href="video.html">Video</a></li>
+			<li><a href="seneca.html">Seneca</a></li>
+			<li><a href="honesty.html">Honesty</a></li>
+		</ul>
+		</div>
+	</nav>
+		
+	<section class="main center">
+	
+	<!-- Start your code here -->
+		<h2>HTML Tables</h2>
+	
+		<h3>Table with table, tr, th, td and caption elements</h3>
+		<table>
+			<caption>My Hobbies</caption>
+			<tr>
+				<th>Hobbies</th>
+				<th>Description</th>
+				<th>Time spent</th>
+			</tr>
+			<tr>
+				<td>Anime</td>
+				<td>Watch Naruto, One piece, Black Clover</td>
+				<td>3 hours minimum</td>
+			</tr>
+			<tr>
+				<td>Manga</td>
+				<td>Read Japanese Comics</td>
+				<td>3 hours minimum</td>
+			</tr>
+			<tr>
+				<td>Korean Drama and Variety Shows</td>
+				<td>Watch Running man and other korean dramas</td>
+				<td>4 hours</td>
+			</tr>
+			
+		</table>
+		<br/>
+		
+		<h3>Table with thead, tfoot, tbody elements</h3>
+		
+		<table>
+			<caption>My Favourite authors</caption>
+			<thead>
+				<tr>
+					<th>Author Name</th>
+					<th>Works</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Eiichiro Oda</td>
+					<td>One Piece</td>
+				</tr>
+				<tr>
+					<td>Masashi Kishimoto</td>
+					<td>Naruto</td>
+				</tr>
+				<tr>
+					<td>Yoshihiro Togashi</td>
+					<td>Hunter x Hunter</td>
+				</tr>
+				<tr>
+					<td>Hiro Mashima</td>
+					<td>Fairytail</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+			</tfoot>
+		</table>
+	
+		<h3>Populating Table with Javascript</h3>
+		<div id="tablelist">
+		</div>
+		<br/>
+	<!-- End your code here  -->
+	
+	</section>
+	<footer>
+	  <div class="center">
+		  &copy; 2018 Leny Fe Fernandez
+	  </div>
+	</footer>
+</body>
+</html>	  

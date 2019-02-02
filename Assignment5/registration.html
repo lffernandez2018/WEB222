@@ -1,0 +1,143 @@
+<!---
+*
+* WEB222 – Assignment #5
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: Leny Fe Fernandez Student ID: 120818174 Date: 2018-04-05
+* 
+********************************************************************************/-->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Registration Page - by Fernandez</title>
+        <link rel="stylesheet" type= "text/css" href="css/normalize1.css"/>
+        <script src="js/registration.js"></script>
+    </head>
+    <body>
+        <div class = "main-container">
+        <header>
+                <div id= "page-title">MJ's Cafe </div>
+                <div class="logo">
+                    <img src= "img/logo.JPG" alt="MJ's CAFE"/> 
+                </div>  
+        </header>
+        
+        <nav>
+                <ul>
+                    <li><a href= "index.html">Welcome Page</a></li>
+                    <li><a class= "active" href= "registration.html">Registration</a></li>
+        
+                </ul>
+        </nav>
+        <section>
+           
+                <div id="title"><h3>Create User Account</h3></div>
+                <form id="form" name ="signup" method="post" action="https://httpbin.org/post" onsubmit="return formValidation();" >
+                <div class="subtitle">USER INFORMATION</div>
+                
+                <!--First Name -->
+                <label for="fname" class="content">First Name</label>
+                <input type="text" name="fname" id="fname" required onchange="return validateFname();"><div class="check" id="fnamecheck"></div><br/>
+                
+                <!--Last Name -->
+                <label for="lname" class="content">Last Name</label>
+                <input type="text" name="lname" id="lname" required onchange="return validateLname();"><div class="check" id="lnamecheck"></div><br/>
+
+                 <!--phone-->
+                 <label for="phone" class="content">Phone Number</label>
+                 <input type="tel" name="phone" id="phone" required placeholder="xxx-xxx-xxxx" onchange="return validatePhone();"><div class="check" id="phonecheck" ></div><br/>
+                
+                 <!--email-->
+                 <label for="email" class="content">Email Address</label>
+                 <input type="email" name="email" id="email" required><div class="check" id="emailcheck"></div><br/>
+
+                 <!--Address -->
+                 <div class="subtitle">Shipping Address:</div>
+                 <label for="unit" class="content">Unit #</label>
+                 <input type="number" name="unit" id="unit"><div class="check" id="unitcheck"></div> <br/>
+                 <label for="street" class="content">Street #</label>
+                 <input type="number" name="street" id="street" required><div class="check" id="streetcheck"></div><br/>
+                 <label for="streetname" class="content">Street Name</label>
+                 <input type="text" name="streetname" id="streetname" required onchange="return validateStreetname();"><div class="check" id="streetnamecheck"></div> <br/>
+                 <label for="city" class="content">City</label>
+                 <input type="text" name="city" id="city" required onchange="return validateCity();"><div class="check" id="citycheck"></div><br/>
+                 <label for="province" class="content">Province</label>
+                 <select name="province" id="province" size=1>
+                     <optgroup label="Provinces">
+                         <option value="ON">Ontario</option>
+                         <option value="QC">Quebec</option>
+                         <option value="NS">Nova Scotia</option>
+                         <option value="NB">New Brunswick</option>
+                         <option value="MB">Manitoba</option>
+                         <option value="BC">British Columbia</option>
+                         <option value="PE">Prince Edward Island</option>
+                         <option value="SK">Saskatchewan</option>
+                         <option value="AB">Alberta</option>
+                         <option value="NL">Newfoundland and Labrador</option>
+                         <option value="NT">Northwest Territories</option>
+                         <option value="YT">Yukon</option>
+                         <option value="NU">Nunavut</option>
+                     </optgroup>
+                 </select>
+                 <br/><br/>
+                 <label for="postal" class="content">Postal Code</label>
+                 <input type="text" name="postal" id="postal" required onchange="return validatePostalCode();"><div class="check" id="postalcheck"></div><br/>
+                 
+            
+                 <div class="subtitle">User Name and Password</div>
+                <!--username-->
+                 <label for="username" class="content">Username</label>
+                 <input type="text" name="username" id="username" required onchange="return validateUserName();"><div class="check" id="usernamecheck"></div><br/>
+                 
+                <!--password-->
+                <label for="pass" class="content">Password</label>
+                <input type="password" name="pass" id="pass" required onchange="return validatePassword();"><div class="check" id="passcheck"></div><br/>
+                
+                 <!--Confirm password-->
+                 <label for="conpass" class="content">Confirm Password</label>
+                 <input type="password" name="conpass" id="conpass" required onchange="return validateConfirmPassword();"><div class="check" id="conpasscheck"></div><br/>
+                  
+                 <input type="text" name = "hi" list= "sub"/>
+                 <datalist id="sub">
+                     <option value="EC"></option>
+                    <option value="d"> </option>
+                    <option value="EC"></option>
+                    <option value="d"> </option>
+                 </datalist>
+                 <input type = "radio" name = "hi" value = "2"/>TWO <br/>
+                 <!--Submit and Reset Buttons-->
+                 <div id = "buttn">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset" onclick="clearErrors();">
+                     
+                 </div>
+                 <!--Hidden fields last name and student id-->
+                 <input type="hidden" name="lastName" id="lastName" value="Fernandez"/>
+                 <input type="hidden" name="studentId" id="studentId" value="120818174"/>
+            
+                 
+                </form>
+      
+        </section>
+        <div class="aside-wrapper">
+        <aside>
+                <h4> *Error Panel* </h4>
+            <!--errors panel-->
+            <div id="errorplace" class="error">
+            </div>
+       </aside>
+        </div>
+        <footer>
+            <div>
+                &copy; 2018 Leny Fe Fernandez
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

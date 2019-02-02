@@ -1,0 +1,80 @@
+/* Place all of your CSS Code in this file */
+
+/********************************************************************************* 
+*
+* WEB222 – Assignment #4a
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: Leny Fe Fernandez Student ID: 120818174 Date: 2018-03-18
+* 
+********************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+/* new font colour to the <body> elements */
+
+body {
+    color: #4e0000;
+    
+}
+
+/* new backgroud colour to the <nav> and <footer> */
+nav, footer {
+    background-color: #490505;
+}
+
+/* style the <header></header> element using at least 2 properties*/
+header {
+    font-size: 2em;
+    background-color: transparent;
+}
+/* 4. Style the <h1 class="app-title"></h1> using at least 3 properties. One of these properties must be
+setting the font to a "web-font", available on the Google Fonts CDN */
+h1.app-title {
+    font-family: 'Lobster';
+    font-style: italic;
+    background-color: inherit;
+}
+
+/* Style the <div class="main-table-container"></div> using at least 3 properties.*/
+div.main-table-container {
+    max-height: 400px;
+    overflow-y: scroll;
+    display: inline-block;
+    
+}
+
+/* Add at least 4 style properties to the <th></th> elements inside the <table class="main-tabletop"></table> element. 
+This will ensure that the top (stationary) row of our table looks distinctive.*/
+
+table.main-table-top th {
+    border: 2px solid gray;
+    text-align: center;
+    background-color: #dfc1dc;
+    height: 60px;
+    font-weight: bold;
+    padding: 5px;
+  
+}
+
+/* Add at least 4 style properties to the <td></td> elements inside the <table class="maintable"></table> element. 
+This will ensure that the cells within our main table have appropriate spacing and are styled to match the rest of the page.*/
+
+table.main-table td {
+    border: 2px solid gray;
+    text-align: left;
+    background-color: #f5edf4;
+    padding: 5px;
+    width: 100%;
+   
+}
+
+/*. Add at least 2 properties to all <span></span> elements that are used for the description of the pets.*/
+
+table.main-table p span {
+    font-weight: bolder;
+    font-style: italic;
+
+}
